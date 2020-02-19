@@ -1,0 +1,308 @@
+/* Structure */
+
+#rem-demo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  line-height: 20px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+#rem-demo > * {
+  display: flex;
+  flex-direction: column;
+}
+
+#rem-demo .rem-demo-header {
+  position: relative;
+  z-index: 2;
+  flex: 0 1 auto;
+  padding: 12px 16px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.08);
+}
+
+#rem-demo .rem-demo-footer {
+  position: relative;
+  z-index: 2;
+  flex: 0 1 auto;
+  padding: 12px 16px;
+  box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+#rem-demo .rem-demo-footer > * {
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+  opacity: 0.64;
+}
+
+#rem-demo .rem-demo-footer > *:last-child {
+  margin: 0;
+}
+
+#rem-demo .rem-demo-body {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
+}
+
+
+/* Legend */
+
+#rem-demo .rem-demo-legend {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#rem-demo .rem-demo-legend li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 2px 16px 2px 0;
+}
+
+#rem-demo .rem-demo-legend li *,
+#rem-demo .rem-demo-legend li:after {
+  vertical-align: top;
+  display: inline-block;
+}
+
+#rem-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+/* Info pane */
+
+#rem-info-pane {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  left: 16px;
+  width: 288px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+#rem-info-pane > *:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+#rem-info-pane * { pointer-events: auto; }
+
+#rem-demo .menu,
+.rem-cluster-info {
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  padding: 16px;
+}
+
+/* Diesel price menu */
+
+#rem-demo .menu h2 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 20px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+#rem-demo .menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+
+#rem-demo .menu li {
+  position: relative;;
+  float: left;
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  color: #333;
+  font-weight: 300;
+  width: 25%;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+#rem-demo .menu li:hover {
+  opacity: 0.64;
+}
+
+#rem-demo .menu li.active {
+  background: #EEE;
+}
+
+#rem-demo .menu ul > li:first-child:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#rem-demo .menu ul > li:last-child:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#rem-demo .menu ul > li:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+#rem-demo .menu ul li + li {
+  margin-left: -1px;
+}
+
+
+/* Cluster info */
+
+#rem-demo .rem-cluster-info {
+  max-height: 384px;
+  overflow: scroll;
+}
+
+#rem-demo .rem-cluster-info--empty {
+  display: none;
+}
+
+#rem-demo .rem-cluster-info dl {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#rem-demo .rem-cluster-info dl dt,
+#rem-demo .rem-cluster-info dl dd {
+  float: left;
+  line-height: 16px;
+  margin: 0 0 4px 0;
+}
+
+#rem-demo .rem-cluster-info dl dt {
+  width: 68%;
+  clear: left;
+  padding-right: 8px;
+  font-weight: bold;
+}
+
+#rem-demo .rem-cluster-info dl dd {
+  width: 32%;
+  padding-left: 8px;
+  text-align: right;
+}
+
+#rem-demo .rem-cluster-info dl dd + dd {
+  margin-left: 68%;
+}
+
+#rem-demo .rem-cluster-info dl dt:first-of-type {
+  width: 32%;
+}
+
+#rem-demo .rem-cluster-info dl dd:first-of-type {
+  width: 68%;
+  word-break: break-all;
+}
+
+/* CSS tooltip */
+
+#rem-demo [data-tooltip] {
+  position: relative;
+  cursor: pointer;
+  padding-right: 20px;
+  z-index: 1000;
+}
+
+#rem-demo [data-tooltip]:after {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  content: '?';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  border-radius: 512px;
+  box-shadow: inset 0 0 0 2px black;
+  text-align: center;
+  color: black;
+  opacity: 0.32;
+  font-weight: bold;
+}
+
+#rem-demo [data-tooltip]:hover:before {
+  content: attr(data-tooltip);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 288px;
+  height: auto;
+  margin-top: 4px;
+  overflow: hidden;
+  padding: 12px 16px;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.80);
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 400;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Mapbox */
+
+#rem-demo .mapboxgl-map {
+  font: inherit;
+}
+
+#rem-demo .mapboxgl-ctrl-top-right .mapboxgl-ctrl {
+  margin: 16px 16px 0 0;
+  float: right;
+}
+
+#rem-demo .mapboxgl-layers {
+  overflow: visible;
+}
+
+#rem-demo .mapboxgl-layers ul {
+  background: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+  margin: 0;
+  padding: 12px 16px;
+}
+
+#rem-demo .mapboxgl-layers ul li {
+  position: relative;
+  margin: 0;
+  padding-right: 20px;
+}
+
+#rem-demo .mapboxgl-layers ul li:hover {
+  opacity: 0.64;
+}
+
+#rem-demo .mapboxgl-layers ul li.active:before {
+  font-family: sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '✔';
+  opacity: 0.48;
+}

@@ -1,0 +1,36 @@
+<div>
+
+    <h1>The Reference Electrification Model</h1>
+    <p>The Reference Electrification Model (REM) supports (1) large-scale electrification planning and (2) local (smaller-scale) electrification projects. Required information about building locations, solar irradiance, topography, grid extent and reliability, expected consumer demand, fuel costs, and infrastructure costs are input into the model. After running a series of clustering and optimization algorithms specifically designed for electrification planning, REM produces lowest-cost system designs. A user can then tune input parameters to enable sensitivity analyses and derive policy-driven insights or entrepreneurially-driven plans. When building location data not available, we can provide inferences using satellite imagery and deep learning-powered building extraction systems.</p>
+
+    <h1>Large-Scale REM</h1>
+
+    <p>Based on how complete the input data is, REM's large-scale operation mode uses different methods to estimate the electrification status of consumers. It will then identify the electrification mode (i.e. grid extensions, microgrids, or standalone systems) for each individual building that most closely conforms to planning objectives which may include cost, implied emissions, and reliability. Such building-level granularity is a unique attribute of REM. Subsequent steps help to determine the financial viability of the projects.</p>
+    <p>The large-scale functionality of REM can be particularly useful for informing policy-makers by enabling detailed sensitivity and scenario-analyses. Uses can change model parameters and compare outcomes for each scenario. The effect of differing technology solutions, subsidy requirements, final costs to consumers, and many other inputs can be very valuable for decision-makers who would have no other way of making such comparisons. REM can reveal nontrivial second and third-order characteristics about electrification plans, and help decision-makers ensure that their policies are well-founded.</p>
+
+    <p>Below, we demonstrate illustrations of REM outputs for a region in Uganda. In the first image, we force 100% grid connection. In the second ind third images, we show cost-optimal designs produced assuming 100% grid reliability and 85% grid reliability, respectively. </p>
+
+    <img src="\img\rem01.PNG" style="max-width:90%">
+
+    <img src="\img\rem02.PNG" style="max-width:90%">
+
+    <img src="\img\rem03.PNG" style="max-width:90%">
+
+    <h1>Local REM</h1>
+
+    <p>Local REM (LREM) uses a subset of REM's decision-making processes for use at the smaller scales (e.g., town or village level). LREM aims to be a comprehensive open-source tool that is specific to rural microgrid design and available to entrepreneurs in developing regions. It is capable of outputting practically implementable microgrid designs. In comparison to existing tools, LREM uniquely combines the following features: </p>
+    <ol type="1">
+        <li>LREM is a single package capable of computing both generation investment, operational performance, and detailed network design starting from the building level.</li>
+        <li>LREM abstains from presenting complexities that are burdensome in the rural setting, even though such complexities may be useful in more developed contexts.
+        <li>LREM includes inputs and financial analyses that are specific to rural microgrid projects.</li>
+        <li>Once finished, LREM will be a modular open-source tool. It will provide a framework into which other modelers may insert and share their contributions.</li>
+    </ol>
+    <img src="\img\LREM.PNG" style="max-width:90%">
+
+    <h1>Code and Utilization</h1>
+    Description in progress!
+
+    <h1>REM Web Demo</h1>
+    <p>See the link <a href="/rem-web-demo/">here</a> for a preview of our web demo! The results shared are not official team recommendations and are intended for visualization demonstration only. Please use Google Chrome or Mozilla Firefox to view. </p>
+
+</div>

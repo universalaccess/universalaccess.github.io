@@ -1,0 +1,36 @@
+.feature-properties table {
+  line-height: 1;
+  margin-bottom: 10px;
+}
+.feature-properties td:first-child {
+  font-weight: bold;
+}
+
+.menu {
+  position: absolute;
+  background-color: white;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.menu h2 {
+  font-size: 1rem;
+}
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.menu li.active {
+  background: #eaeaea;
+  font-weight: bold;
+  text-decoration: underline;
+}
