@@ -1,25 +1,38 @@
 <div>
     <h1>Inference Tools</h1>
-    <p>Large-scale geospatial inference is important for universal energy access research, since ground truth data is rarely available for detailed planning decisions. Among other inference activities, we perform building extraction from satellite imagery and perform probabilistic data fusion to estimate electrification status. </p>
+    <p>Large-scale geospatial inference is important for universal energy access research, since ground truth data is rarely available for detailed planning decisions. Among other inference activities, we perform building extraction from satellite imagery, perform probabilistic data fusion to estimate electrification status, and estimate and forecast electricity demand. </p>
 
-    <h1>Building Extraction</h1>
+    <!--  ///////////////////////////////////  -->
+
+    <h2>Building Extraction</h2>
     <img style="float:right;width:300px;max-width:100%" src="/img/visionpipeline.PNG">
     <p>The limited availability of labeled satellite and aerial image data in rural areas is problematic for many economic development efforts. In these areas, free services like Google Maps and paid commercial suppliers provide great image resources but lack valuable descriptive information. This renders services that rely on such labeled geospatial data not applicable, including services for large-scale infrastructure planning. The goal of this part of our work concerns the accurate labeling of large data sets for use by REM.</p>
-    <p>As shown in the figure to the right, the REM model pipeline can be depicted as a series of steps, starting with raw satellite image data that can be augmented with other information. The initial orthorectification, pansharpening, and processing steps convert this raw data into formats usable by our deep learning systems. The object recognition and segmentation step then identifies building boundaries and produces segmentations. These segmentations are input into load localization and characterization algorithms which determine discrete connection points for buildings and provide rooftop area information as a proxy for latent electric load. Finally, the core REM step produces optimal system designs for electrification planning efforts, the data is visualized, and the results are communicated to stakeholders and clients.</p>
+
+    <p>As shown in the figure to the right, the REM model pipeline can be depicted as a series of steps, starting with raw satellite image data that can be augmented with other information. The initial orthorectification, pansharpening, and processing steps convert this raw data into formats usable by our deep learning systems. The object recognition and segmentation step then identifies building boundaries and produces segmentations. These segmentations are input into load localization and characterization algorithms which determine discrete connection points for buildings and provide rooftop area information as a proxy for latent electric load. Finally, the core REM step produces optimal system designs for electrification planning efforts, the data is visualized, and the results are communicated to stakeholders and partners.</p>
+
     <div class="outer">
         <div class="inner">
             <img style="max-width:500px" src="/img/googlemaps-segmentations.PNG">
         </div>
     </div>
 
-    <h1>Inferring Electrification Status with Probabilistic Models</h1>
-    <p>The question of where buildings are electrified is problematic for energy infrastructure planning. We are using probabilistic modelling techniquese to infer where people are electrified using data on nighttime lights, coarse existing grid information, and census/survey data.</p>
+    <!--  ///////////////////////////////////  -->
+
+    <h2>Electrification Status Estimation with Probabilistic Models</h2>
+
+    <p>Understanding where current electricity supplies exist and where they do not is imperative for energy infrastructure planning. We are developing new data fusion techniques to infer where people are electrified using data from high-resolution satellite imagery, nighttime lights satellite imagery, sparse existing power grid information, census data, and electrification survey data. One of the frameworks we are developing for this purpose combines deep learning concepts with graphical models to benefit from the flexibility and expressiveness of DL and the structure and interpretability of GMs. We are developing these methods in collaboration with Dr. John Fisher and the <a href="http://groups.csail.mit.edu/vision/sli/">Sensing, Learning, and Inference Group</a> at MIT CSAIL.</p>
 
     <img src="/img/20161212_GPC_2012_ERT_larger.jpg" style="max-width:90%">
-    <!--<div class="outer">-->
-        <!--&lt;!&ndash;<div class="inner">&ndash;&gt;-->
-            <!--<img style="max-width:750px" src="/img/20161212_GPC_2012_ERT_larger.jpg">-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--</div>-->
+
+    <p style="font-size: 10px">Lee, Adaptive Electricity Access Planning, Massachusetts Institute of Technology, 2018.</p>
+
+    <!--  ///////////////////////////////////  -->
+
+    <h2>Electricity Demand Forecasting
+    </h2>
+
+    <p>Electrification planning models for low-access countries reveal that characterizations of electricity demand have outsized effects on prescribed supply technology designs. Estimating and forecasting latent electricity demand at high levels of spatial granularity is essential to prospects for right-sizing system designs. We are building scalable machine learning systems using novel data fusion frameworks (as described above), multi-scale electricity consumption data sets, satellite imagery, and other features.</p>
+
+    <p style="font-size: 10px">Lee, S.J., Taneja, J, Why Demand Demands more Attention, Energy for Growth Hub, 2020.</p>
 
 </div>
