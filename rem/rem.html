@@ -3,7 +3,7 @@
     <h1>The Reference Electrification Model</h1>
     <p>The Reference Electrification Model (REM) supports (1) large-scale electrification planning and (2) local (smaller-scale) electrification projects. Required information about building locations, solar irradiance, topography, grid extent and reliability, expected consumer demand, fuel costs, and infrastructure costs are input into the model. After running a series of clustering and optimization algorithms specifically designed for electrification planning, REM produces lowest-cost system designs. A user can then tune input parameters to enable sensitivity analyses and derive policy-driven insights or entrepreneurially-driven plans. When building location data not available, we can provide inferences using satellite imagery and deep learning-powered building extraction systems.</p>
 
-    <h1>Large-Scale REM</h1>
+    <h2>Large-Scale REM</h2>
 
     <p>Based on how complete the input data is, REM's large-scale operation mode uses different methods to estimate the electrification status of consumers. It will then identify the electrification mode (i.e. grid extensions, microgrids, or standalone systems) for each individual building that most closely conforms to planning objectives which may include cost, implied emissions, and reliability. Such building-level granularity is a unique attribute of REM. Subsequent steps help to determine the financial viability of the projects.</p>
     <p>The large-scale functionality of REM can be particularly useful for informing policy-makers by enabling detailed sensitivity and scenario-analyses. Uses can change model parameters and compare outcomes for each scenario. The effect of differing technology solutions, subsidy requirements, final costs to consumers, and many other inputs can be very valuable for decision-makers who would have no other way of making such comparisons. REM can reveal nontrivial second and third-order characteristics about electrification plans, and help decision-makers ensure that their policies are well-founded.</p>
@@ -16,7 +16,7 @@
 
     <img src="\img\rem03.PNG" style="max-width:90%">
 
-    <h1>Local REM</h1>
+    <h2>Local REM</h2>
 
     <p>Local REM (LREM) uses a subset of REM's decision-making processes for use at the smaller scales (e.g., town or village level). LREM aims to be a comprehensive open-source tool that is specific to rural microgrid design and available to entrepreneurs in developing regions. It is capable of outputting practically implementable microgrid designs. In comparison to existing tools, LREM uniquely combines the following features: </p>
     <ol type="1">
@@ -27,10 +27,57 @@
     </ol>
     <img src="\img\LREM.PNG" style="max-width:90%">
 
-    <h1>Code and Utilization</h1>
+    <h2>Code and Utilization</h2>
     Description in progress!
 
-    <h1>REM Web Demo</h1>
+    <h2>REM Web Demo</h2>
+
     <p>See the link <a href="/rem-web-demo/">here</a> for a preview of our web demo! The results shared are not official team recommendations and are intended for visualization demonstration only. Please use Google Chrome or Mozilla Firefox to view. </p>
+
+    <!--  //////////////////////////////////////  -->
+
+    <h1>The Reference Network Model (RNM)</h1>
+
+    <p>For a complete description and links to RNM-specific papers, please see this <a href="http://www.iit.comillas.edu/technology-offer/rnm">link.</a></p>
+
+    <img src="\img\RNM1.png" style="max-width:90%">
+
+    <p>The Reference Network Model (RNM) is a very large-scale planning tool, which plans the electrical distribution network using the coordinates and power of consumers, and distributed energy resources (DER). It designs the high, medium and low voltage networks, including substations, feeders and auxiliary components. For planning the network, it considers technical constraints -such as voltage and thermal limits- and reliability targets. It also considers geographical constraints such as the street map, the topography and forbidden ways through such as nature reserves or lakes. The main goal of RNM is to design a reference network, whose cost is indicative of the efficient cost required for providing a distribution service. Theses types of models were initially designed to serve as a regulation tool for assessing the distribution network costs under incentive regulation. However, RNM has been applied to multiple problems in which detailed network designs are required, such as the choice of electrification modes (in REM), the impact of integrating distributed energy resources in the distribution networks and synthetic or representative distribution networks creation to build realistic research case studies.</p>
+
+    <p>There are mainly two RNM models, Greenfield and Brownfield:</p>
+
+    <ol>
+        <li>The Greenfield model builds the network from scratch and can be used to model an initial network. There are two variants of the greenfield model, one of them modelling European-like networks with three-phase medium voltage networks and distribution transformers, while the other version modelling U.S.-like networks with single-, two- and three-phase feeders and in addition to three-phase distribution transformer, modelling also single-phase center tap distribution transformers.</li>
+        <li>The Brownfield model expands a network in order to accommodate additional demand or new distributed energy resources. The brownfield version needs as starting point an initial network, which can be a real network or a network build with the Greenfield model. The brownfield version is used to expand the network and estimate which are the reinforcements required in future scenarios. </li>
+    </ol>
+
+    <p>Both models are able to deal with very large-scale networks comprising millions of customers and electrical nodes. </p>
+
+    <p>Both models are organized in four layers, which account for different levels of information: (i) The logical layer, (ii) the topological layer, (iii) the electrical layer and (iv) the continuity of supply layer. Each layer comprises both data and algorithms. </p>
+
+    <ul>
+        <li> The logical layer includes the concept of graph, nodes and branches, for modeling a network. It only considers connection at a logical level, without including node coordinates or electrical parameters.</li>
+        <li>The topological layer incorporates the coordinates and algorithms for obtaining the best path for new distribution lines, considering forbidden ways through (such as lakes or nature reserves) and a street map which is automatically calculated considering the input location of customers.</li>
+        <li>The electrical layer incorporates all the electrical parameters such as bus voltages, resistances and reactances of the equipment. It includes power-flow algorithms (backward forward method for radial network, and Gauss-Seidel and Newton-Raphson for meshed networks). It also incorporates planning algorithms for determining the location of transformer substations and branch-exchange methods for planning the network.</li>
+        <li>Finally the continuity of supply layer includes loops, switching and auxiliary equipment, as well as the planning algorithms for achieving the ASIDI and ASIFI targets. </li>
+    </ul>
+
+    <p>Regarding the information required by RNM, the most critical data are the location and peak power of every single customer and distributed energy resource (DER). If daily profiles are used it also has to be specified for every single element, the active and reactive power either consumed or injected into the network at each hour. With this information, the models plan the network for connecting these customers and DERs to the transmission substations. </p>
+
+    <div class="outer">
+        <div class="inner" style="max-width: 900px;">
+            <img src="/img/RNM2.png" style="max-width:700px">
+            <img src="/img/RNM3.png" style="max-width:200px">
+            <i>Example network built with the model in urban areas</i>
+        </div>
+    </div>
+
+    <div class="outer">
+        <div class="inner" style="max-width: 900px;">
+            <img src="/img/RNM4.jpg" style="max-width:700px">
+            <img src="/img/RNM5.png" style="max-width:200px">
+            <i>Example network built with the model in rural areas</i>
+        </div>
+    </div>
 
 </div>
