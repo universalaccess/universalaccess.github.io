@@ -1,18 +1,33 @@
-<div>
+<main ng-cloak ng-controller="dataCtrl">
+
+    <aside style="position: fixed; top: 50px; left:calc(50% - 700px); width: 240px">
+        <div class="toc" style="background-color: rgba(255,255,255,0.9); padding: 10px;" >
+            <h4><b>Contents</b></h4>
+            <ul>
+                <li ng-repeat='item in ngToc track by $index'>
+                    <a ng-click='scrollTo(this)' href=''>{{item.contents}}</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+
+
+    <div ng-toc-target="h2">
 
     <h1>Research on Regulation and Business Models</h1>
 
     <!--  ///////////////////////////////////////  -->
 
     <br>
-    <h3>Global Commission to Energy Energy Poverty, Rockefeller Foundation</h3>
+    <h2>Global Commission to Energy Energy Poverty, Rockefeller Foundation</h2>
     <p><a href="https://www.endenergypoverty.org/">https://www.endenergypoverty.org/</a></p>
     Description in progress!
 
     <!--  ///////////////////////////////////////  -->
 
     <br>
-    <h3>Electricity Access: Scoping the Energy Company of the Future (ECoF)</h3>
+    <h2>Electricity Access: Scoping the Energy Company of the Future (ECoF)</h2>
     <p>The project was developed by MIT in collaboration with Comillas University, during the second half of 2017 and first half of 2018, and it has focused on the development of the core concept of the approach: the regulatory and business model of the energy company of the future. Other institutions – mainly Systemiq / Climate Policy Initiative, focusing on the financial aspects, and Skaden, on the legal ones – have also participated. The work has been guided by an Advisory Group, chaired by the Shell Foundation Director, with participation from policy makers, investors, practitioners and existing incumbents, including, among others, AFDB, World Bank, Globeleq, Shell, Ecofin and Tata Power.</p>
     <p>The lack of access to electricity by a large number of people in many low-income and developing countries is a major contemporary issue, with social, ethical, environmental and technical dimensions. It is a major challenge for the global energy sector, and it may also be an interesting business opportunity.</p>
     <p>The objective of the project was to define a viable large-scale business model, to be deployed in one or more suitable developing countries, which would accelerate electricity access and be attractive for corporate investment.</p>
@@ -43,7 +58,7 @@
     <!--  ///////////////////////////////////////  -->
 
     <br>
-    <h3>Scaling up Energy Investments in Africa for Inclusive and Sustainable Growth</h3>
+    <h2>Scaling up Energy Investments in Africa for Inclusive and Sustainable Growth</h2>
 
     <p>Providing universal, reliable, affordable, and sustainable energy access offers the opportunity to empower the people in Africa to decide the course of their lives through education, health and economic development. Africa is not on track to provide universal electricity access—to meet SDG 7—in the coming decade. Almost 600 million people will still lack access to electricity by 2030 in the absence of major changes (representing 90% of the total estimated population without access globally). Sub-Saharan Africa faces a set of challenges in the next decades, especially related to accelerating population growth, poverty eradication, climate change and environmental degradation. Moreover, the continent faces an urgent social, economic and environmental crisis in the lack of access to clean cooking. The clean cooking sector remains stunted, with 900 million people (over 80% of the population) lacking access to clean cooking solutions, including 70% in urban areas. As Africa’s closest geographic neighbour, Europe is uniquely positioned to support the continent in addressing these challenges.</p>
     <p>The Africa-Europe Alliance for Sustainable Investment and Jobs<sup>1</sup> launched in 2018 works to address key challenges in employment and inequality in Africa. A year after its launch, four Sectoral Task Forces on agriculture, energy, digital economy and transport, were set up as thematic platforms for high-level policy dialogue, and have brought together experts, politicians, academics and private sector from both continents. The Alliance’s Energy Task Force, named the Africa-Europe High Level Platform for Sustainable Energy Investments (SEI Platform) has worked since April 2019 to produce a report to guide the future activities of Alliance in energy. This report was presented at the Africa Investment Forum in Johannesburg, on November 2019.<sup>2</sup> Professor Ignacio Pérez-Arriaga has led the Task Force working group on regulation and has been a major contributor to the content of the report.</p>
@@ -57,13 +72,13 @@
     <!--  ///////////////////////////////////////  -->
 
     <br>
-    <h3>Spanish National R&D program: Challenges of Universal Access to modern energy, and their impact on climate change. Models to support decision-making.</h3>
+    <h2>Spanish National R&D program: Challenges of Universal Access to modern energy, and their impact on climate change. Models to support decision-making.</h2>
     <p>The objective of this R&D project is the development of a tool-kit that facilitates that electrification agencies and governments of developing countries interact with private companies to define viable business models to provide universal energy access. To build strategies for universal access to energy services that are clean, reliable and affordable for cooking, heating, lighting, health, communications and productive uses requires tools that allow a careful assessment, centered in the diverse present and future needs of the beneficiaries and in their capacities, bringing together suitable innovative technologies, business initiatives, frontier financing and regulatory mechanisms according to the country strengths, to make use of the limited resources in an efficient manner.</p>
 
     <!--  ///////////////////////////////////////  -->
 
     <br>
-    <h3>Research on Governance and Rules of the Southern Africa Power Pool (SAPP)</h3>
+    <h2>Research on Governance and Rules of the Southern Africa Power Pool (SAPP)</h2>
     <p>Power pools can reduce the cost of providing electricity and improve system reliability through coordinated use of energy resources. Realizing these benefits requires careful market design supported by technical, economic and institutional analysis of the system as it exists today and as it will likely evolve in the future. This MIT doctoral dissertation by Amy Rose<sup>1</sup>, supervised by Ignacio Pérez-Arriaga and Robert Stoner, demonstrates this integrated approach through a detailed study of the design and operation of the Southern African Power Pool (SAPP). The thesis develops a linear programming model of the SAPP system that explicitly represents hourly system operations to conduct this analysis. This model is then adapted through the addition of new input parameters or linear constraints to investigate different market design questions including how to implement bilateral contracts in the wholesale market and allocate costs for regional transmission investments. The thesis also examines the design of regional institutions and their role to promote efficient investments and market behavior.</p>
     <p>The primary contributions from this work include a new method to design and incorporate security-motivated bilateral contracts into wholesale markets using Implicit Auctions with Security of Supply Guarantees; a regulatory framework for transmission planning and cost allocation designed specifically for supranational regional markets; a quantitative comparison of transmission pricing methods leading to recommendations to apply Beneficiary Pays for new lines and Average Participations for existing lines; recommended adjustments to transmission regulation to facilitate increased penetrations of renewable energy; and a proposed design for the regional regulator. The thesis also identifies several unique features of developing country power systems that may influence market design. Other markets in Africa, Asia and Central America contain similar technical and institutional characteristics that can lead to similar market challenges. The specific market rules and implementation steps developed for the SAPP may not apply in all regions, but the integrated approach used in this thesis, combining technical models and institutional analysis to support regulatory decisions, could be generalized to other regional electricity markets.</p>
     <p>To better understand how an integrated approach to regional market design can be used to address the unique opportunities and challenges present in developing countries, the thesis develops a package of proposed regulatory measures tailored to the specific case of the SAPP. This dissertation is not designed to be a comprehensive study of every aspect of market design but focuses on key issues identified as common challenges in regional markets. Specifically, this dissertation addresses the following research questions:</p>
@@ -81,8 +96,11 @@
 
 
     <br>
-    <h3>Spanish International Cooperation</h3>
+    <h2>Spanish International Cooperation</h2>
     Description in progress!
 
 
 </div>
+
+
+</main>
