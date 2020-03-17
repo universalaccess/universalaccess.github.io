@@ -1,7 +1,18 @@
 <main ng-cloak ng-controller="dataCtrl">
 
+    <aside class='aside-toc'>
+        <div class="toc" >
+            <h4><b>Contents</b></h4>
+            <ul>
+                <li ng-repeat='item in ngToc track by $index'>
+                    <a ng-click='scrollTo(this)' href=''>{{item.contents}}</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
 
-<div ng-toc-target="h1, h2">
+
+    <div ng-toc-target="h1, h2">
     <h1>Inference Tools</h1>
     <p>Large-scale geospatial inference is important for universal energy access research, since ground truth data is rarely available for detailed planning decisions. Among other inference activities, we perform building extraction from satellite imagery, perform probabilistic data fusion to estimate electrification status, and estimate and forecast electricity demand. </p>
 

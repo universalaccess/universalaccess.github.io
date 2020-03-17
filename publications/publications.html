@@ -1,21 +1,30 @@
+<main ng-cloak ng-controller="dataCtrl">
 
-<div>
-    <div>
-        <div class="section-header">
-            <div class="section-header-inner">
-                <div></div>
-
-                <div></div>
-            </div>
+    <aside class='aside-toc'>
+        <div class="toc" >
+            <h4><b>Contents</b></h4>
+            <ul>
+                <li ng-repeat='item in ngToc track by $index'>
+                    <a ng-click='scrollTo(this)' href=''>{{item.contents}}</a>
+                </li>
+            </ul>
         </div>
+    </aside>
+
+
+    <div ng-toc-target="h1, h2">
+
+    <h1> Publications </h1>
+    <div>
+
         <div class="section-content">
             <div class="row">
                 <div class="col-sm-8">
                     <article>
                         <table class="alignleft">
-                            <h1>
-                                <span>Publications</span>
-                            </h1>
+<!--                            <h1>-->
+<!--                                <span>Publications</span>-->
+<!--                            </h1>-->
                             <tbody>
 
                             <tr class="bibline">
@@ -330,16 +339,93 @@
                                 </td>
                             </tr>
 
+
+
+
+
                             </tbody>
+
+
+
                         </table>
+
+
+
+
                     </article>
 
 
+
+                </div>
+
+
+
+                <div class="col-sm-4">
+                    <aside class="sidebar">
+                        <h3>In the Media</h3>
+                        <ul>
+                            <li>
+                                <a href="https://www.energyforgrowth.org/memo/why-energy-demand-demands-more-attention/">Why Energy Demand Demands more Attention (Energy for Growth Hub, February 2020)</a>
+                            </li>
+                            <li>
+                                <a href="https://www.moneycontrol.com/news/business/companies/tata-power-to-evolve-into-service-company-thanks-to-worlds-largest-microgrid-project-4698161.html">Tata Power to evolve into service company, thanks to world’s largest microgrid project (Moneycontrol, December 2019)</a>
+                            </li>
+                            <li>
+                                <a href="https://www.energyforgrowth.org/memo/the-virtuous-cycle-of-clean-cooking-and-electricity-costs/">The Virtuous Cycle of Clean Cooking and Electricity Costs (Energy for Growth Hub, April 2019)</a>
+                            </li>
+                            <li>
+                                <a href="https://www.energyforgrowth.org/memo/empowered-planning-with-models-satellites-machine-learning/">Empowered Planning with Models, Satellites, and Machine Learning (Energy for Growth Hub, November 2018)</a>
+                            </li>
+                            <li>
+                                <a href="http://energy.economictimes.indiatimes.com/news/power/tata-power-delhi-distribution-launches-microgrid-project-in-bihar-village/56762805">Tata Power Delhi Distribution launches microgrid project in Bihar village (ETEnergyWorld, January 2017)</a>
+                            </li>
+                            <li>
+                                <a href="https://developmentseed.org/blog/2016/05/04/mit-rem-demo/">Modeling Solutions to Energy Access Problems (Development Seed Blog, May 2016)</a>
+                            </li>
+                            <li>
+                                <a href="http://news.mit.edu/2016/tata-researchers-tackle-rural-electrification-0121">Going off grid: Tata researchers tackle rural electrification (MIT News, January 2016)</a>
+                            </li>
+                            <li>
+                                <a href="https://www.technologyreview.com/s/542091/indias-energy-crisis/">India’s Energy Crisis (MIT Technology Review, October 2015)</a>
+                            </li>
+                            <li>
+                                <a href="http://www.theenergycollective.com/caterpoozle/2277748/rural-electrification-rwanda-technical-and-policy-challenges">Rural Electrification in Rwanda: Technical and Policy Challenges (The Energy Collective, October 2015)</a>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-sm-4">
+                    <aside class="sidebar">
+                        <h3>Information Platforms</h3>
+                        <ul>
+
+                            <li>
+                                <p><b><a href="https://fsr.eui.eu/energy-access-portal/">The Energy Access Portal at Energypedia</a></b></p>
+                                <p>Energypedia, in collaboration with WAME, launched the Energy Access Portal on Energypedia at the <a href="http://www.seforallforum.org/">Sustainable Energy for All Forum</a> in Lisbon, Portugal on 2-3 May, 2018. The Energy Access Portal provides an overview of the information on energypedia related to Energy Access. The Energy Access aims to be the central hub for all information related to energy access issues, consolidating articles, publications, tools and related resources on topics such as technology options for energy access, the policy framework for energy access and planning energy access projects. Along with access to information, energy professionals and enthusiasts can share their knowledge and experiences on the portal. </p>
+                            </li>
+                            <li>
+                                <p><b><a href="https://www.wame2015.org/about-us">World Access to Modern Energy (WAME)</a></b></p>
+                                <p>WAME contributes to the Sustainable Development Goal 7 by sharing learning material and stories from the field, providing access to more than 1250 open source publications and case studies focusing on access to energy. The WAME Project strives to contribute to a world where lack of access to energy is no longer a hindrance to human and economic development. </p>
+                                <p>WAME aims to share knowledge on the United Nations Sustainable Development Goal number 7, raise awareness of its importance, and monitor progress toward reducing the number of people without access to reliable, sustainable and modern energy, at affordable prices. WAME focuses on increasing understanding, inspire action and reinforce a sense of hope in the future.</p>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <h1>
+        Book Contributions
+    </h1>
+
+        <div class="section-content">
+            <div class="row">
+                <div class="col-sm-8">
                     <article>
                         <table class="alignleft">
-                            <h1>
-                                <span>Book Contributions</span>
-                            </h1>
+
                             <tbody>
 
                             <tr class="bibline">
@@ -387,11 +473,20 @@
                         </table>
                     </article>
 
+                </div>
+            </div>
+        </div>
+    <h1>
+        Theses
+    </h1>
+
+        <div class="section-content">
+            <div class="row">
+                <div class="col-sm-8">
+
                     <article>
                         <table class="alignleft">
-                            <h1>
-                                <span>Theses</span>
-                            </h1>
+
                             <tbody>
 
                             <tr class="bibline">
@@ -587,14 +682,18 @@
                             </tbody>
                         </table>
                     </article>
-
-
-
+                </div>
+            </div>
+        </div>
+    <h1>
+        Selected Presentations
+    </h1>
+        <div class="section-content">
+            <div class="row">
+                <div class="col-sm-8">
                     <article>
                         <table class="alignleft">
-                            <h1>
-                                <span>Selected Presentations</span>
-                            </h1>
+
                             <tbody>
 
                             <tr class="bibline">
@@ -661,60 +760,9 @@
                         </table>
                     </article>
                 </div>
-                <div class="col-sm-4">
-                    <aside class="sidebar">
-                    <h3>In the Media</h3>
-                    <ul>
-                        <li>
-                            <a href="https://www.energyforgrowth.org/memo/why-energy-demand-demands-more-attention/">Why Energy Demand Demands more Attention (Energy for Growth Hub, February 2020)</a>
-                        </li>
-                        <li>
-                            <a href="https://www.moneycontrol.com/news/business/companies/tata-power-to-evolve-into-service-company-thanks-to-worlds-largest-microgrid-project-4698161.html">Tata Power to evolve into service company, thanks to world’s largest microgrid project (Moneycontrol, December 2019)</a>
-                        </li>
-                        <li>
-                            <a href="https://www.energyforgrowth.org/memo/the-virtuous-cycle-of-clean-cooking-and-electricity-costs/">The Virtuous Cycle of Clean Cooking and Electricity Costs (Energy for Growth Hub, April 2019)</a>
-                        </li>
-                        <li>
-                            <a href="https://www.energyforgrowth.org/memo/empowered-planning-with-models-satellites-machine-learning/">Empowered Planning with Models, Satellites, and Machine Learning (Energy for Growth Hub, November 2018)</a>
-                        </li>
-                        <li>
-                            <a href="http://energy.economictimes.indiatimes.com/news/power/tata-power-delhi-distribution-launches-microgrid-project-in-bihar-village/56762805">Tata Power Delhi Distribution launches microgrid project in Bihar village (ETEnergyWorld, January 2017)</a>
-                        </li>
-                        <li>
-                            <a href="https://developmentseed.org/blog/2016/05/04/mit-rem-demo/">Modeling Solutions to Energy Access Problems (Development Seed Blog, May 2016)</a>
-                        </li>
-                        <li>
-                            <a href="http://news.mit.edu/2016/tata-researchers-tackle-rural-electrification-0121">Going off grid: Tata researchers tackle rural electrification (MIT News, January 2016)</a>
-                        </li>
-                        <li>
-                            <a href="https://www.technologyreview.com/s/542091/indias-energy-crisis/">India’s Energy Crisis (MIT Technology Review, October 2015)</a>
-                        </li>
-                        <li>
-                            <a href="http://www.theenergycollective.com/caterpoozle/2277748/rural-electrification-rwanda-technical-and-policy-challenges">Rural Electrification in Rwanda: Technical and Policy Challenges (The Energy Collective, October 2015)</a>
-                        </li>
-                    </ul>
-                    </aside>
-                </div>
-                <div class="col-sm-4">
-                    <aside class="sidebar">
-                        <h3>Information Platforms</h3>
-                        <ul>
-
-                            <li>
-                                <p><b><a href="https://fsr.eui.eu/energy-access-portal/">The Energy Access Portal at Energypedia</a></b></p>
-                                <p>Energypedia, in collaboration with WAME, launched the Energy Access Portal on Energypedia at the <a href="http://www.seforallforum.org/">Sustainable Energy for All Forum</a> in Lisbon, Portugal on 2-3 May, 2018. The Energy Access Portal provides an overview of the information on energypedia related to Energy Access. The Energy Access aims to be the central hub for all information related to energy access issues, consolidating articles, publications, tools and related resources on topics such as technology options for energy access, the policy framework for energy access and planning energy access projects. Along with access to information, energy professionals and enthusiasts can share their knowledge and experiences on the portal. </p>
-                            </li>
-                            <li>
-                                <p><b><a href="https://www.wame2015.org/about-us">World Access to Modern Energy (WAME)</a></b></p>
-                                <p>WAME contributes to the Sustainable Development Goal 7 by sharing learning material and stories from the field, providing access to more than 1250 open source publications and case studies focusing on access to energy. The WAME Project strives to contribute to a world where lack of access to energy is no longer a hindrance to human and economic development. </p>
-                                <p>WAME aims to share knowledge on the United Nations Sustainable Development Goal number 7, raise awareness of its importance, and monitor progress toward reducing the number of people without access to reliable, sustainable and modern energy, at affordable prices. WAME focuses on increasing understanding, inspire action and reinforce a sense of hope in the future.</p>
-                            </li>
-                        </ul>
-                    </aside>
-                </div>
             </div>
         </div>
 
     </div>
 
-</div>
+</main>

@@ -1,5 +1,18 @@
-<div>
-<!--<img class="floatleft" src="/img/profilepic.jpg">-->
+<main ng-cloak ng-controller="dataCtrl">
+
+    <aside class='aside-toc'>
+        <div class="toc" >
+            <h4><b>Contents</b></h4>
+            <ul>
+                <li ng-repeat='item in ngToc track by $index'>
+                    <a ng-click='scrollTo(this)' href=''>{{item.contents}}</a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+
+    <div ng-toc-target="h1, h2">
 
 
     <h1>Contact</h1>
@@ -25,11 +38,6 @@
         <li>Fall 2018: MIT Graduate subject, "Engineering, economics and regulation of universal energy access in developing countries."</li> </br>
         <li>Spring 2017: MIT graduate subject, "Planning, Policy, and Technology for Energy Access in Developing Countries" for Spring 2017. Course <a href="/paper-repo/15.S02_8.5X11_admissionscap.pdf">flyer</a> and <a href="https://stellar.mit.edu/S/course/15/sp17/15.S02/">website</a></li> </br>
     </ul>
-
-    <h1>Teaching</h1>
-
-
-
 
     <h1>Sponsors</h1>
     <p>Many thanks to the following institutions and people for their generous support and collaboration: </p>
@@ -71,3 +79,5 @@
     <a href="http://mitei.mit.edu/">MIT Energy Initiative</a> <br>
     <a href="https://e4dev.mit.edu/">MIT Energy for Human Development</a> <br>
 </div>
+
+</main>

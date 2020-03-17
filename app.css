@@ -201,6 +201,8 @@ h1, h2, h3, h4, h5 {
 
 .toc {
     margin-top: 6em;
+    background-color: rgba(255,255,255,0.9);
+    padding: 10px;
 }
 
 .toc-heading {
@@ -222,10 +224,12 @@ h1, h2, h3, h4, h5 {
 
 .toc ul li {
     margin-bottom: .45em;
+    line-height:80%;
 }
 
 .toc ul li a{
-    font-size:12px
+    font-size:12px;
+
 }
 
 .toc .indent-one {
@@ -234,6 +238,13 @@ h1, h2, h3, h4, h5 {
 
 .toc .indent-two {
     margin-left: 1.75em;
+}
+
+.aside-toc{
+    position: fixed;
+    top: -30px;
+    left:calc(50% - 700px);
+    width: 240px
 }
 
 /*toc custom*/
